@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <div>
+            <h3>
+                Selecione os dados do carro para buscar o valor na tabela FIPE.
+            </h3>
+        </div>
+        <div>
+            <label for="marcas">Marcas</label>
+            <select id="marcas" onChange="atualizarMarcaEscolhida()">
+                <option value="escolher">Escolher</option>
+            </select>    
+        </div>
+        <div>
+            <label for="modelos">Modelos</label>
+            <select id="modelos" onChange="atualizarModeloEscolhido()">
+                <option value="escolher">Escolher</option>
+            </select>    
+        </div>
+        <div>
+            <label for="anos">Ano</label>
+            <select id="anos" onChange="atualizarAnoEscolhido()">
+                <option value="escolher">Escolher</option>
+            </select>    
+        </div>
+        <div>
+            <input type="button" value="Buscar">
+        </div>
+        <div>
+            <label for="valor">Valor</label>
+            <input type="text" id="valor" disabled>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

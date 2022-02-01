@@ -1,0 +1,13 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div{
+    padding: 1rem;
+}
+
+#marcas, #modelos, #anos{
+    width: 300px;
+}
