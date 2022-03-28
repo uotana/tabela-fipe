@@ -5,41 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <title>Document</title>
+    <title>Tabela FIPE: Consulta rápida e gratuita!</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Tabela FIPE</h1>
+    </header>
     <main>
         <div>
-            <h3>
-                Selecione os dados do carro para buscar o valor na tabela FIPE.
-            </h3>
+            <h2>
+                Selecione os dados do carro para efetuar busca.
+            </h2>
         </div>
-        <div>
+        <div class="opcao">
             <label for="marcas">Marcas</label>
             <select id="marcas" onChange="atualizarMarcaEscolhida()">
                 <option value="escolher">Escolher</option>
             </select>    
         </div>
-        <div>
+        <div  class="opcao">
             <label for="modelos">Modelos</label>
             <select id="modelos" onChange="atualizarModeloEscolhido()">
                 <option value="escolher">Escolher</option>
             </select>    
         </div>
-        <div>
+        <div  class="opcao">
             <label for="anos">Ano</label>
             <select id="anos" onChange="atualizarAnoEscolhido()">
                 <option value="escolher">Escolher</option>
             </select>    
         </div>
-        <div>
-            <input type="button" value="Buscar">
-        </div>
-        <div>
+       
+        <section>
+            <p>
+              <button type="submit">Buscar</button>
+            </p>
+        </section>
+        <section>
             <label for="valor">Valor</label>
             <input type="text" id="valor" disabled>
-        </div>
+        </section>
     </main>
     
     <script src="script.js"></script>

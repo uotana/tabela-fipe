@@ -6,7 +6,7 @@ const dropdownMarcas = document.querySelector('#marcas');
 const dropdownModelos = document.querySelector('#modelos');
 const dropdownAnos = document.querySelector('#anos');
 const valorFipe = document.querySelector('#valor');
-const buscarBtn = document.querySelector('input[type="button"]');
+const buscarBtn = document.querySelector('button');
 
 const buscarMarcasNaApi = async () => {
   let marcas;
@@ -46,18 +46,22 @@ const buscarValorNaApi = async () => {
 };
 
 const atualizarMarcaEscolhida = () => {
+  console.log("atualizar marca");
   marcaEscolhida = dropdownMarcas.options[dropdownMarcas.selectedIndex].value;
 }
 
 const atualizarModeloEscolhido = () => {
+  console.log("atualizar modelo");
   modeloEscolhido = dropdownModelos.options[dropdownModelos.selectedIndex].value;
 }
 
 const atualizarAnoEscolhido = () => {
+  console.log("atualizar ano");
   anoEscolhido = dropdownAnos.options[dropdownAnos.selectedIndex].value;
 }
 
 dropdownMarcas.addEventListener('click', async () => {
+  console.log("buscar marcas na api");
   const marcas = await buscarMarcasNaApi();
   marcas.forEach(marca => {
     dropdownMarcas.innerHTML = dropdownMarcas.innerHTML + 
@@ -66,6 +70,7 @@ dropdownMarcas.addEventListener('click', async () => {
 })
 
 dropdownModelos.addEventListener('click', async () => {
+  console.log("buscar modelos na api");
   const modelos = await buscarModelosNaApi(marcaEscolhida);
   modelos.modelos.forEach(modelo => {
     dropdownModelos.innerHTML = dropdownModelos.innerHTML + 
@@ -74,6 +79,7 @@ dropdownModelos.addEventListener('click', async () => {
 })
 
 dropdownAnos.addEventListener('click', async () => {
+  console.log("buscar anos na api");
   const anos = await buscarAnosNaApi(marcaEscolhida, modeloEscolhido);
   anos.forEach(ano => {
     dropdownAnos.innerHTML = dropdownAnos.innerHTML + 

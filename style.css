@@ -1,13 +1,44 @@
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body{
+    display: grid;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: rgba(45,45,45,0.1);
 }
 
-div{
-    padding: 1rem;
+header{
+    padding-top: 1.5rem;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
 }
+
+main{
+    display: grid;
+    justify-items: center;
+    padding: 0rem 2rem 2rem 2rem;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+}
+
+.opcao{
+    display: grid;
+    justify-items: center;
+    margin-bottom: 0.5rem;
+}
+
 
 #marcas, #modelos, #anos{
-    width: 300px;
+    width: 10rem;
+}
+
+@media only screen and (min-width: 600px) {
+    body{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body{
+        max-width: 800px;
+    }
 }
