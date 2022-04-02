@@ -9,40 +9,45 @@
 </head>
 <body>
     <header>
-        <h1>Tabela FIPE</h1>
+        <h1 id="title">Tabela FIPE</h1>
+        <hr>
     </header>
     <main>
-        <div>
+        <section id="instrucao">
             <h2>
                 Selecione os dados do carro para efetuar a busca.
             </h2>
-        </div>
-        <div class="opcao">
-            <label for="marcas">Marca</label>
-            <select id="marcas" onChange="atualizarMarcaEscolhida()">
-                <option value="escolher">Escolher</option>
-            </select>    
-        </div>
-        <div  class="opcao">
-            <label for="modelos">Modelo</label>
-            <select id="modelos" onChange="atualizarModeloEscolhido()">
-                <option value="escolher">Escolher</option>
-            </select>    
-        </div>
-        <div  class="opcao">
-            <label for="anos">Ano</label>
-            <select id="anos" onChange="atualizarAnoEscolhido()">
-                <option value="escolher">Escolher</option>
-            </select>    
-        </div>
+        </section>
+    
+        <section id="dados-carro">
+            <div class="opcao">
+                <label for="marcas">Marca</label>
+                <select id="marcas" onChange="atualizarMarcaEscolhida()">
+                    <option value="escolher">Escolher</option>
+                </select>    
+            </div>
+            <div  class="opcao">
+                <label for="modelos">Modelo</label>
+                <select id="modelos" onChange="atualizarModeloEscolhido()">
+                    <option value="escolher">Escolher</option>
+                </select>    
+            </div>
+            <div  class="opcao">
+                <label for="anos">Ano</label>
+                <select id="anos" onChange="atualizarAnoEscolhido()">
+                    <option value="escolher">Escolher</option>
+                </select>    
+            </div>
+        </section>
+        
        
         <section>
             <p>
               <button type="submit">Buscar</button>
             </p>
         </section>
-        <section>
-            <label for="valor">Valor</label>
+        <section id="resultado-busca">
+            <label for="valor"><h3>Valor</h3></label>
             <input type="text" id="valor" disabled>
         </section>
     </main>
