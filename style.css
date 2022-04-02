@@ -23,7 +23,7 @@ main{
 .opcao{
     display: grid;
     justify-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 
